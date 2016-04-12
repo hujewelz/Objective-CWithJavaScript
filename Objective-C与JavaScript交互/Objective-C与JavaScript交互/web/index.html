@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="jquery-2.2.3.min.js"></script>
+
+<style type="text/css">
+	div {
+		width: 100px;
+		height: 100px;
+		margin: 10px 10px 0 0;
+		background-color: yellow;
+	}
+</style>
+
+</head>
+<body>
+<p></p>
+<div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+<button onclick="App.pickImage()">选取图片</button>
+ <script >
+	var buttonClick = function(index) {
+		alert(index);
+		var eId = '#div'+index;
+		$(eId).css("background-color", "red");
+        
+	}
+
+	var picCallback = function(img) {
+		// body...
+		//alert(img);
+		$('#div1').text(img);
+	}
+
+</script>
+</body>
+</html>
